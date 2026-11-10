@@ -1,0 +1,19 @@
+{
+  "Logistic Regression": {
+    "params": {
+      "C": 0.1,
+      "class_weight": "balanced"
+    },
+    "auc_mean": 0.7775653431861279,
+    "auc_std": 0.028192299882404903
+  },
+  "Random Forest": {
+    "params": {
+      "class_weight": "balanced",
+      "min_samples_leaf": 5,
+      "n_estimators": 300
+    },
+    "auc_mean": 0.7903452108660014,
+    "auc_std": 0.027456574255052508
+  }
+}

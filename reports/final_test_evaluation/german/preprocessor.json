@@ -1,0 +1,163 @@
+{
+  "numeric_cols": [
+    "duration",
+    "credit_amount",
+    "installment_commitment",
+    "residence_since",
+    "existing_credits",
+    "num_dependents"
+  ],
+  "categorical_cols": [
+    "checking_status",
+    "credit_history",
+    "purpose",
+    "savings_status",
+    "employment",
+    "other_parties",
+    "property_magnitude",
+    "other_payment_plans",
+    "housing",
+    "job",
+    "own_telephone"
+  ],
+  "log_cols": [
+    "credit_amount"
+  ],
+  "numeric": {
+    "duration": {
+      "median": 18.0,
+      "mean": 20.94705882352941,
+      "std": 11.989044884052854
+    },
+    "credit_amount": {
+      "median": 2333.0,
+      "mean": 7.796492875235563,
+      "std": 0.7766894952483988
+    },
+    "installment_commitment": {
+      "median": 3.0,
+      "mean": 2.9411764705882355,
+      "std": 1.117275480027149
+    },
+    "residence_since": {
+      "median": 3.0,
+      "mean": 2.855294117647059,
+      "std": 1.0939411622367932
+    },
+    "existing_credits": {
+      "median": 1.0,
+      "mean": 1.408235294117647,
+      "std": 0.5712137262945162
+    },
+    "num_dependents": {
+      "median": 1.0,
+      "mean": 1.1541176470588235,
+      "std": 0.3610614877328728
+    }
+  },
+  "categorical": {
+    "checking_status": {
+      "mode": "no checking",
+      "categories": [
+        "0<=X<200",
+        "<0",
+        ">=200",
+        "no checking"
+      ]
+    },
+    "credit_history": {
+      "mode": "existing paid",
+      "categories": [
+        "all paid",
+        "critical/other existing credit",
+        "delayed previously",
+        "existing paid",
+        "no credits/all paid"
+      ]
+    },
+    "purpose": {
+      "mode": "radio/tv",
+      "categories": [
+        "business",
+        "domestic appliance",
+        "education",
+        "furniture/equipment",
+        "new car",
+        "other",
+        "radio/tv",
+        "repairs",
+        "retraining",
+        "used car"
+      ]
+    },
+    "savings_status": {
+      "mode": "<100",
+      "categories": [
+        "100<=X<500",
+        "500<=X<1000",
+        "<100",
+        ">=1000",
+        "no known savings"
+      ]
+    },
+    "employment": {
+      "mode": "1<=X<4",
+      "categories": [
+        "1<=X<4",
+        "4<=X<7",
+        "<1",
+        ">=7",
+        "unemployed"
+      ]
+    },
+    "other_parties": {
+      "mode": "none",
+      "categories": [
+        "co applicant",
+        "guarantor",
+        "none"
+      ]
+    },
+    "property_magnitude": {
+      "mode": "car",
+      "categories": [
+        "car",
+        "life insurance",
+        "no known property",
+        "real estate"
+      ]
+    },
+    "other_payment_plans": {
+      "mode": "none",
+      "categories": [
+        "bank",
+        "none",
+        "stores"
+      ]
+    },
+    "housing": {
+      "mode": "own",
+      "categories": [
+        "for free",
+        "own",
+        "rent"
+      ]
+    },
+    "job": {
+      "mode": "skilled",
+      "categories": [
+        "high qualif/self emp/mgmt",
+        "skilled",
+        "unemp/unskilled non res",
+        "unskilled resident"
+      ]
+    },
+    "own_telephone": {
+      "mode": "none",
+      "categories": [
+        "none",
+        "yes"
+      ]
+    }
+  }
+}

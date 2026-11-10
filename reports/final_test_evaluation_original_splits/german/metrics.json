@@ -1,0 +1,19 @@
+{
+  "dataset": "german",
+  "model": "Logistic Regression",
+  "threshold": 0.4,
+  "train_rows": 700,
+  "validation_rows": 149,
+  "test_rows": 151,
+  "accuracy": 0.6754966887417219,
+  "precision": 0.47297297297297297,
+  "recall": 0.7777777777777778,
+  "f1": 0.5882352941176471,
+  "roc_auc": 0.8056603773584906,
+  "average_precision": 0.6749412334988503,
+  "tn": 67,
+  "fp": 39,
+  "fn": 10,
+  "tp": 35,
+  "protocol_note": "Original saved split IDs; test was viewed in an earlier provisional run."
+}

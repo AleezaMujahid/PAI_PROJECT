@@ -1,0 +1,21 @@
+{
+  "dataset": "german",
+  "model": "Logistic Regression",
+  "version": "tuned + locked threshold",
+  "hyperparameters": {
+    "C": 0.1,
+    "class_weight": "balanced"
+  },
+  "threshold": 0.4,
+  "seed": 42,
+  "split_sizes": {
+    "train": 700,
+    "validation": 150,
+    "development": 850,
+    "test": 150
+  },
+  "preprocessing_fit_scope": "train+validation",
+  "test_used_for_tuning": false,
+  "selection_report_available": true,
+  "fairness_mitigation_applied": false
+}

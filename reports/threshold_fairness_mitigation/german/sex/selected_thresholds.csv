@@ -1,0 +1,11 @@
+model,fold,group_a,group_b,threshold_a,threshold_b,selection_status
+Logistic Regression,0,female,male,0.45,0.4,selected
+Logistic Regression,1,female,male,0.35,0.35,selected
+Logistic Regression,2,female,male,0.35,0.35,selected
+Logistic Regression,3,female,male,0.4,0.4,selected
+Logistic Regression,4,female,male,0.35,0.35,selected
+Random Forest,0,female,male,0.4,0.35,selected
+Random Forest,1,female,male,0.45,0.45,selected
+Random Forest,2,female,male,0.4,0.35,selected
+Random Forest,3,female,male,0.45,0.45,selected
+Random Forest,4,female,male,0.45,0.45,selected

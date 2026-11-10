@@ -1,0 +1,22 @@
+{
+  "dataset": "taiwan",
+  "model": "Random Forest",
+  "version": "tuned + locked threshold",
+  "hyperparameters": {
+    "n_estimators": 300,
+    "min_samples_leaf": 10,
+    "class_weight": "balanced"
+  },
+  "threshold": 0.55,
+  "seed": 42,
+  "split_sizes": {
+    "train": 20975,
+    "validation": 4495,
+    "development": 25470,
+    "test": 4495
+  },
+  "preprocessing_fit_scope": "train+validation",
+  "test_used_for_tuning": false,
+  "selection_report_available": true,
+  "fairness_mitigation_applied": false
+}

@@ -1,0 +1,13 @@
+attribute,group,reference,role,metric,estimate,ci_low,ci_high,ci_excludes_no_difference,valid_bootstrap_share,reliability
+age_group,under_25,25+,headline,denial_gap,0.1420831394569358,0.06215508596450498,0.22011793255209636,True,1.0,ok
+age_group,under_25,25+,headline,disparate_impact,0.7652179579070827,0.6395818191880596,0.8961202302782966,True,1.0,ok
+age_group,under_25,25+,headline,fpr_gap,0.11831550802139035,0.009735365674346694,0.22731359939494217,True,1.0,ok
+age_group,under_25,25+,headline,fnr_gap,-0.04732834899512994,-0.1672707147375079,0.07496539610086182,False,1.0,ok
+sex,female,male,headline,denial_gap,0.023562412342215955,-0.04411285622858967,0.08674997550268772,False,1.0,ok
+sex,female,male,headline,disparate_impact,0.9601518026565466,0.8568178496945813,1.0777940650008617,False,1.0,ok
+sex,female,male,headline,fpr_gap,-0.015015104836538784,-0.0883292866848937,0.05717906672925061,False,1.0,ok
+sex,female,male,headline,fnr_gap,-0.01008693981459241,-0.11404580837244196,0.09744380482456132,False,1.0,ok
+foreign_worker,yes,no,exploratory,denial_gap,0.12326345036625408,-0.040005306926359535,0.2728306611717198,False,1.0,UNRELIABLE (no: only 37 rows)
+foreign_worker,yes,no,exploratory,disparate_impact,0.8245866283249462,0.6773469799441537,1.071529002547521,False,1.0,UNRELIABLE (no: only 37 rows)
+foreign_worker,yes,no,exploratory,fpr_gap,0.05442733178865111,-0.10860889029087512,0.19925378528290574,False,1.0,UNRELIABLE (no: only 37 rows)
+foreign_worker,yes,no,exploratory,fnr_gap,0.05067567567567566,-0.6839307598039216,0.3455506406345332,False,0.98,UNRELIABLE (no: only 37 rows)

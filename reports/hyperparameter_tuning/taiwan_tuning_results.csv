@@ -1,0 +1,10 @@
+model,params,auc_mean,auc_std,f1_at_050_mean
+Logistic Regression,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.7483163595398874,0.010334172359573322,0.5139334112999243
+Logistic Regression,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.7483123788794372,0.01033496753371913,0.5138977386782859
+Logistic Regression,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.7482678136086062,0.010427461135667192,0.5140755971344817
+Random Forest,"{""class_weight"": ""balanced"", ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.7799503344553763,0.0057474020839416865,0.5434783163483824
+Random Forest,"{""class_weight"": null, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.7793431131901581,0.006025938278664929,0.47026864134351437
+Random Forest,"{""class_weight"": ""balanced"", ""min_samples_leaf"": 5, ""n_estimators"": 300}",0.7769841603508694,0.006912123643498082,0.5416657916425283
+Random Forest,"{""class_weight"": null, ""min_samples_leaf"": 5, ""n_estimators"": 300}",0.7758335943307595,0.006745455254395445,0.4677065428520376
+Random Forest,"{""class_weight"": ""balanced"", ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.7716132503864399,0.007351444781154794,0.5361128109543338
+Random Forest,"{""class_weight"": null, ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.7689175377618931,0.005845024426383319,0.4682676231400474

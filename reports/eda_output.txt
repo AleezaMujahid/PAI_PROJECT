@@ -1,0 +1,224 @@
+﻿
+======================================================================
+1. SHAPE, TYPES, FIRST ROWS
+======================================================================
+shape (rows, columns): (1000, 21)
+
+column types:
+ checking_status             str
+duration                  int64
+credit_history              str
+purpose                     str
+credit_amount             int64
+savings_status              str
+employment                  str
+installment_commitment    int64
+personal_status             str
+other_parties               str
+residence_since           int64
+property_magnitude          str
+age                       int64
+other_payment_plans         str
+housing                     str
+existing_credits          int64
+job                         str
+num_dependents            int64
+own_telephone               str
+foreign_worker              str
+class                       str
+
+first 5 rows:
+   checking_status  duration                  credit_history              purpose  credit_amount    savings_status employment  installment_commitment     personal_status other_parties  residence_since property_magnitude  age other_payment_plans   housing  existing_credits                 job  num_dependents own_telephone foreign_worker class
+0              <0         6  critical/other existing credit             radio/tv           1169  no known savings        >=7                       4         male single          none                4        real estate   67                none       own                 2             skilled               1           yes            yes  good
+1        0<=X<200        48                   existing paid             radio/tv           5951              <100     1<=X<4                       2  female div/dep/mar          none                2        real estate   22                none       own                 1             skilled               1          none            yes   bad
+2     no checking        12  critical/other existing credit            education           2096              <100     4<=X<7                       2         male single          none                3        real estate   49                none       own                 1  unskilled resident               2          none            yes  good
+3              <0        42                   existing paid  furniture/equipment           7882              <100     4<=X<7                       2         male single     guarantor                4     life insurance   45                none  for free                 1             skilled               2          none            yes  good
+4              <0        24              delayed previously              new car           4870              <100     1<=X<4                       3         male single          none                4  no known property   53                none  for free                 2             skilled               2          none            yes   bad
+
+numeric columns (7): ['duration', 'credit_amount', 'installment_commitment', 'residence_since', 'age', 'existing_credits', 'num_dependents']
+text columns (14): ['checking_status', 'credit_history', 'purpose', 'savings_status', 'employment', 'personal_status', 'other_parties', 'property_magnitude', 'other_payment_plans', 'housing', 'job', 'own_telephone', 'foreign_worker', 'class']
+
+======================================================================
+2. MISSING VALUES AND DUPLICATES
+======================================================================
+real missing values per column (only columns with > 0):
+  none - 0 missing cells
+
+duplicate rows: 0
+fake-missing placeholders found: none
+NOTE: 'none' in other_parties / other_payment_plans / own_telephone is a REAL category, not a missing value.
+
+======================================================================
+3. TEXT COLUMNS - every category and its count
+======================================================================
+
+[checking_status]  (4 categories)
+checking_status
+no checking    394
+<0             274
+0<=X<200       269
+>=200           63
+
+[credit_history]  (5 categories)
+credit_history
+existing paid                     530
+critical/other existing credit    293
+delayed previously                 88
+all paid                           49
+no credits/all paid                40
+
+[purpose]  (10 categories)
+purpose
+radio/tv               280
+new car                234
+furniture/equipment    181
+used car               103
+business                97
+education               50
+repairs                 22
+domestic appliance      12
+other                   12
+retraining               9
+
+[savings_status]  (5 categories)
+savings_status
+<100                603
+no known savings    183
+100<=X<500          103
+500<=X<1000          63
+>=1000               48
+
+[employment]  (5 categories)
+employment
+1<=X<4        339
+>=7           253
+4<=X<7        174
+<1            172
+unemployed     62
+
+[personal_status]  (4 categories)
+personal_status
+male single           548
+female div/dep/mar    310
+male mar/wid           92
+male div/sep           50
+
+[other_parties]  (3 categories)
+other_parties
+none            907
+guarantor        52
+co applicant     41
+
+[property_magnitude]  (4 categories)
+property_magnitude
+car                  332
+real estate          282
+life insurance       232
+no known property    154
+
+[other_payment_plans]  (3 categories)
+other_payment_plans
+none      814
+bank      139
+stores     47
+
+[housing]  (3 categories)
+housing
+own         713
+rent        179
+for free    108
+
+[job]  (4 categories)
+job
+skilled                      630
+unskilled resident           200
+high qualif/self emp/mgmt    148
+unemp/unskilled non res       22
+
+[own_telephone]  (2 categories)
+own_telephone
+none    596
+yes     404
+
+[foreign_worker]  (2 categories)
+foreign_worker
+yes    963
+no      37
+
+[class]  (2 categories)
+class
+good    700
+bad     300
+
+======================================================================
+4. NUMERIC COLUMNS - summary statistics
+======================================================================
+       duration  credit_amount  installment_commitment  residence_since      age  existing_credits  num_dependents
+count   1000.00        1000.00                 1000.00          1000.00  1000.00           1000.00         1000.00
+mean      20.90        3271.26                    2.97             2.84    35.55              1.41            1.16
+std       12.06        2822.74                    1.12             1.10    11.38              0.58            0.36
+min        4.00         250.00                    1.00             1.00    19.00              1.00            1.00
+25%       12.00        1365.50                    2.00             2.00    27.00              1.00            1.00
+50%       18.00        2319.50                    3.00             3.00    33.00              1.00            1.00
+75%       24.00        3972.25                    4.00             4.00    42.00              2.00            1.00
+max       72.00       18424.00                    4.00             4.00    75.00              4.00            2.00
+
+skewness (large positive = long right tail):
+ credit_amount             1.95
+num_dependents            1.91
+existing_credits          1.27
+duration                  1.09
+age                       1.02
+residence_since          -0.27
+installment_commitment   -0.53
+
+======================================================================
+5. TARGET BALANCE (bad = default = 1, good = 0)
+======================================================================
+class
+good    700
+bad     300
+
+proportions:
+ class
+good    0.7
+bad     0.3
+
+A model that always predicts 'good' would score 70.0% accuracy - so accuracy alone is misleading.
+
+======================================================================
+6. DEFAULT RATE PER SENSITIVE GROUP
+======================================================================
+
+[age_group]
+             n  default_rate
+age_group                   
+25+        851         0.281
+under_25   149         0.409
+
+[sex]
+          n  default_rate
+sex                      
+female  310         0.352
+male    690         0.277
+
+[foreign_worker]
+                  n  default_rate
+foreign_worker                   
+no               37         0.108
+yes             963         0.307
+
+NOTE: German Credit has no 'female single' category, so this 'sex' column is derived from personal_status and is limited. Mention this in the report.
+
+======================================================================
+7. SAVING PLOTS to C:\Users\dell\PAI_PROJECT\reports\figures
+======================================================================
+saved:
+  01_class_balance.png
+  02_age_hist.png
+  03_credit_amount_hist.png
+  04_default_rate_by_group.png
+  05_correlation.png
+  06_default_rate_by_category.png
+
+EDA finished. The raw CSV was not modified.

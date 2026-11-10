@@ -1,0 +1,19 @@
+{
+  "dataset": "taiwan",
+  "model": "Random Forest",
+  "threshold": 0.55,
+  "train_rows": 20975,
+  "validation_rows": 4494,
+  "test_rows": 4496,
+  "accuracy": 0.7902580071174378,
+  "precision": 0.5247619047619048,
+  "recall": 0.5537688442211055,
+  "f1": 0.5388753056234719,
+  "roc_auc": 0.7801854172318319,
+  "average_precision": 0.5605500388763415,
+  "tn": 3002,
+  "fp": 499,
+  "fn": 444,
+  "tp": 551,
+  "protocol_note": "Original saved split IDs; test was viewed in an earlier provisional run."
+}

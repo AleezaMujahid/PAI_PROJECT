@@ -1,0 +1,42 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw and processed customer data
+data/raw/
+data/processed/
+
+# Trained model binaries
+*.joblib
+*.pkl
+*.pickle
+
+# Large generated prediction tables
+**/predictions.csv
+
+# Local temporary files
+*.log
+tmp/
+temp/

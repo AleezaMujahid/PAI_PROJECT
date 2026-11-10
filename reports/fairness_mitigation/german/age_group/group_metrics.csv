@@ -1,0 +1,9 @@
+group,n,predicted_default_rate,fpr,fnr,dataset,model,version,attribute
+25+,728,0.5192307692307693,0.40307101727447214,0.18840579710144928,german,Logistic Regression,original,age_group
+under_25,121,0.6942148760330579,0.5342465753424658,0.0625,german,Logistic Regression,original,age_group
+25+,728,0.5274725274725275,0.4088291746641075,0.17391304347826086,german,Logistic Regression,reweighed,age_group
+under_25,121,0.6776859504132231,0.5205479452054794,0.08333333333333333,german,Logistic Regression,reweighed,age_group
+25+,728,0.47115384615384615,0.3531669865642994,0.2318840579710145,german,Random Forest,original,age_group
+under_25,121,0.6694214876033058,0.5342465753424658,0.125,german,Random Forest,original,age_group
+25+,728,0.47527472527472525,0.35892514395393477,0.2318840579710145,german,Random Forest,reweighed,age_group
+under_25,121,0.6776859504132231,0.547945205479452,0.125,german,Random Forest,reweighed,age_group

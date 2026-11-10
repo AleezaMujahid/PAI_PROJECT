@@ -1,0 +1,253 @@
+{
+  "created_at_utc": "2026-11-10T16:59:43.564928+00:00",
+  "selection_stage": "development_only",
+  "test_set_used": false,
+  "datasets": {
+    "german": {
+      "dataset": "german",
+      "selected_model": "Logistic Regression",
+      "selected_version": "Tuned + threshold",
+      "selected_threshold": 0.4,
+      "selection_reason": "Strong development OOF F1 and recall; fairness gaps must be documented.",
+      "development_oof_metrics": {
+        "accuracy": 0.657243816254417,
+        "precision": 0.461038961038961,
+        "recall": 0.8352941176470589,
+        "f1": 0.5941422594142259,
+        "roc_auc": 0.7741598996500956,
+        "average_precision": 0.587682914082378
+      },
+      "comparison_source": "reports\\model_comparison_final\\german\\performance_comparison.csv",
+      "fairness_evidence": {
+        "fairness_comparison_files": [
+          "reports\\fairness_comparison\\german\\fairness_gaps.csv",
+          "reports\\fairness_comparison\\german\\group_metrics.csv"
+        ],
+        "threshold_mitigation": {
+          "age_group": {
+            "source": "reports\\threshold_fairness_mitigation\\german\\age_group\\summary.csv",
+            "results": [
+              {
+                "model": "Logistic Regression",
+                "version": "group_threshold",
+                "accuracy": 0.6572781065088757,
+                "precision": 0.46064423806748084,
+                "recall": 0.7960784313725491,
+                "f1": 0.5830913155931612,
+                "predicted_default_rate_gap": 0.02710959105901768,
+                "fpr_gap": 0.013217122327715047,
+                "fnr_gap": 0.09157924474997645
+              },
+              {
+                "model": "Logistic Regression",
+                "version": "original",
+                "accuracy": 0.6572850678733031,
+                "precision": 0.46227864123521456,
+                "recall": 0.8352941176470589,
+                "f1": 0.5946498243685416,
+                "predicted_default_rate_gap": 0.19035370326864715,
+                "fpr_gap": 0.15837446498505772,
+                "fnr_gap": -0.1312778981071664
+              },
+              {
+                "model": "Random Forest",
+                "version": "group_threshold",
+                "accuracy": 0.6431395753567699,
+                "precision": 0.4517092625971005,
+                "recall": 0.7960784313725491,
+                "f1": 0.5739440918943319,
+                "predicted_default_rate_gap": 0.02837091012515893,
+                "fpr_gap": 0.018936441299003313,
+                "fnr_gap": 0.06930638906248662
+              },
+              {
+                "model": "Random Forest",
+                "version": "original",
+                "accuracy": 0.6737208492864601,
+                "precision": 0.4744363183652685,
+                "recall": 0.7882352941176471,
+                "f1": 0.5919131107151854,
+                "predicted_default_rate_gap": 0.20941467191250612,
+                "fpr_gap": 0.18912620181232742,
+                "fnr_gap": -0.12075679100069343
+              }
+            ]
+          },
+          "sex": {
+            "source": "reports\\threshold_fairness_mitigation\\german\\sex\\summary.csv",
+            "results": [
+              {
+                "model": "Logistic Regression",
+                "version": "group_threshold",
+                "accuracy": 0.6313331012878525,
+                "precision": 0.440913208052792,
+                "recall": 0.8509803921568627,
+                "f1": 0.5805145630163653,
+                "predicted_default_rate_gap": 0.009960790085336579,
+                "fpr_gap": -0.019701749100943088,
+                "fnr_gap": 0.01755653216179532
+              },
+              {
+                "model": "Logistic Regression",
+                "version": "original",
+                "accuracy": 0.6572850678733031,
+                "precision": 0.46227864123521456,
+                "recall": 0.8352941176470589,
+                "f1": 0.5946498243685416,
+                "predicted_default_rate_gap": 0.02428491828720334,
+                "fpr_gap": -0.007064749687854565,
+                "fnr_gap": 0.0071398654951286555
+              },
+              {
+                "model": "Random Forest",
+                "version": "group_threshold",
+                "accuracy": 0.6548973198746955,
+                "precision": 0.4597593343262366,
+                "recall": 0.8156862745098039,
+                "f1": 0.5862453457562812,
+                "predicted_default_rate_gap": 0.005179719712773201,
+                "fpr_gap": -0.010024730057327236,
+                "fnr_gap": 0.059659580185895976
+              },
+              {
+                "model": "Random Forest",
+                "version": "original",
+                "accuracy": 0.6737208492864601,
+                "precision": 0.4744363183652685,
+                "recall": 0.7882352941176471,
+                "f1": 0.5919131107151854,
+                "predicted_default_rate_gap": 0.011177796953561015,
+                "fpr_gap": -0.00487677903119762,
+                "fnr_gap": 0.053313981340297134
+              }
+            ]
+          }
+        }
+      },
+      "final_test_evaluated": false
+    },
+    "taiwan": {
+      "dataset": "taiwan",
+      "selected_model": "Random Forest",
+      "selected_version": "Tuned + threshold",
+      "selected_threshold": 0.55,
+      "selection_reason": "Strong development OOF F1 and ROC-AUC; fairness gaps must be documented.",
+      "development_oof_metrics": {
+        "accuracy": 0.79488790294083,
+        "precision": 0.534601784812258,
+        "recall": 0.5634427684117125,
+        "f1": 0.5486435113184724,
+        "roc_auc": 0.7797371779380213,
+        "average_precision": 0.5527530494356182
+      },
+      "comparison_source": "reports\\model_comparison_final\\taiwan\\performance_comparison.csv",
+      "fairness_evidence": {
+        "fairness_comparison_files": [
+          "reports\\fairness_comparison\\taiwan\\fairness_gaps.csv",
+          "reports\\fairness_comparison\\taiwan\\group_metrics.csv"
+        ],
+        "threshold_mitigation": {
+          "age_group": {
+            "source": "reports\\threshold_fairness_mitigation\\taiwan\\age_group\\summary.csv",
+            "results": [
+              {
+                "model": "Logistic Regression",
+                "version": "group_threshold",
+                "accuracy": 0.7867208130577309,
+                "precision": 0.5191627492811124,
+                "recall": 0.4979591836734693,
+                "f1": 0.5080567985196279,
+                "predicted_default_rate_gap": -0.005457554585193652,
+                "fpr_gap": -0.014382052757242502,
+                "fnr_gap": 0.06227090275917426
+              },
+              {
+                "model": "Logistic Regression",
+                "version": "original",
+                "accuracy": 0.7682275517540993,
+                "precision": 0.48051401540027827,
+                "recall": 0.5737355811889973,
+                "f1": 0.5228402053398742,
+                "predicted_default_rate_gap": 0.13132629122348907,
+                "fpr_gap": 0.10689766279030097,
+                "fnr_gap": -0.11078877410467369
+              },
+              {
+                "model": "Random Forest",
+                "version": "group_threshold",
+                "accuracy": 0.7645366963640018,
+                "precision": 0.48295504765469044,
+                "recall": 0.6102928127772848,
+                "f1": 0.5348825693875737,
+                "predicted_default_rate_gap": 0.011283996881703057,
+                "fpr_gap": -0.018229163728633185,
+                "fnr_gap": -0.00023496235250839437
+              },
+              {
+                "model": "Random Forest",
+                "version": "original",
+                "accuracy": 0.7948877922082327,
+                "precision": 0.5346424746575785,
+                "recall": 0.5634427684117125,
+                "f1": 0.5486070508112878,
+                "predicted_default_rate_gap": 0.08903247034109939,
+                "fpr_gap": 0.05990174227123041,
+                "fnr_gap": -0.07617022013942591
+              }
+            ]
+          },
+          "sex": {
+            "source": "reports\\threshold_fairness_mitigation\\taiwan\\sex\\summary.csv",
+            "results": [
+              {
+                "model": "Logistic Regression",
+                "version": "group_threshold",
+                "accuracy": 0.7804775656495504,
+                "precision": 0.5061190001827705,
+                "recall": 0.5238686779059449,
+                "f1": 0.5131831741909524,
+                "predicted_default_rate_gap": 0.009211339215231156,
+                "fpr_gap": 0.019597739031919414,
+                "fnr_gap": -0.027096016342626407
+              },
+              {
+                "model": "Logistic Regression",
+                "version": "original",
+                "accuracy": 0.7682275517540993,
+                "precision": 0.48051401540027827,
+                "recall": 0.5737355811889973,
+                "f1": 0.5228402053398742,
+                "predicted_default_rate_gap": -0.03754189148441554,
+                "fpr_gap": -0.023370958545141107,
+                "fnr_gap": 0.03031113396174815
+              },
+              {
+                "model": "Random Forest",
+                "version": "group_threshold",
+                "accuracy": 0.7778477368453633,
+                "precision": 0.499968226580879,
+                "recall": 0.5946761313220941,
+                "f1": 0.542340739100997,
+                "predicted_default_rate_gap": 0.0007898517138397732,
+                "fpr_gap": 0.015956001856362395,
+                "fnr_gap": -0.008771921663769255
+              },
+              {
+                "model": "Random Forest",
+                "version": "original",
+                "accuracy": 0.7948877922082327,
+                "precision": 0.5346424746575785,
+                "recall": 0.5634427684117125,
+                "f1": 0.5486070508112878,
+                "predicted_default_rate_gap": -0.03931358428898517,
+                "fpr_gap": -0.023698655395245544,
+                "fnr_gap": 0.03315967353826815
+              }
+            ]
+          }
+        }
+      },
+      "final_test_evaluated": false
+    }
+  }
+}
